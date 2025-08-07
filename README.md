@@ -31,17 +31,17 @@ Before you begin, ensure you have [Bun](https://bun.sh/docs/installation) instal
 
 You need to install dependencies for both the `backend` and `frontend` directories.
 
-1.  **Clone the repository** or create the project structure.
+1. **Clone the repository** or create the project structure.
 
-2.  **Install Backend Dependencies:**
-    Open a terminal, navigate to the `backend` folder, and run:
+2. **Install Backend Dependencies**  
+   Open a terminal, navigate to the `backend` folder, and run:
     ```bash
     cd backend
     bun install
     ```
 
-3.  **Install Frontend Dependencies:**
-    Open another terminal, navigate to the `frontend` folder, and run:
+3. **Install Frontend Dependencies**  
+   Open another terminal, navigate to the `frontend` folder, and run:
     ```bash
     cd ../frontend
     bun install
@@ -53,8 +53,21 @@ You need to install dependencies for both the `backend` and `frontend` directori
 
 The backend server and the frontend development server must be running at the same time in two separate terminals.
 
-**1. Start the Backend Server**
-
+### 1. Start the Backend Server
 In your first terminal (inside the `backend` folder):
 ```bash
 bun run index.ts
+```
+The server will start and listen on http://localhost:3000.
+### 2. Start the Frontend Server
+In your second terminal (inside the frontend folder):
+```bash
+bun run dev
+```
+The frontend will be accessible at http://localhost:5173 (or another port if 5173 is in use).
+
+### 3. Use the Scraper
+Open your web browser and navigate to the frontend URL (e.g., http://localhost:5173).
+
+### 4. Enter a Keyword and Scrape
+Type a product keyword into the input field and click the "Scrape Products" button. The results will appear on the page.
